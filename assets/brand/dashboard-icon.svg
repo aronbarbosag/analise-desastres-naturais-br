@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa do Brasil - Dashboard de Desastres Naturais</title>
+  <desc id="desc">Ícone com o contorno simplificado do mapa do Brasil e marcador de alerta para o dashboard.</desc>
+  <rect width="96" height="96" rx="22" fill="#F7FBFC"/>
+  <rect x="8" y="8" width="80" height="80" rx="18" fill="#07334A"/>
+  <path
+    d="M43.9 67.3 L46.3 64.8 L48.7 63.5 L48.9 62.3 L48.6 61.5 L47.8 61.5 L48.2 59.5 L46.7 59.4 L46.1 57.3 L43.4 57 L43.3 54 L44.1 52.1 L42.9 50.8 L43 49.6 L40.7 49.6 L40.3 46.4 L34.5 44.1 L34 41.2 L32.4 41.5 L29.9 43 L27.3 42.9 L27.5 40.9 L25.3 41.6 L25.2 41 L24 40.8 L24.3 40.3 L23 38.5 L24.1 37.1 L24.4 35.4 L27.3 34.1 L28.2 34.3 L28.9 30.4 L28.1 28.1 L29.2 28 L28.3 27.5 L28.3 26.7 L30.8 26.6 L31.4 26.1 L31.8 27.4 L33.9 28 L36.6 26 L35.7 25.7 L34.8 23.4 L37.2 24.3 L37.3 23.7 L39.6 23.1 L39.9 22.2 L40.6 22.1 L41.5 23.8 L40.9 25.2 L41.2 26.5 L42.4 27.3 L44.3 26.3 L46 26.5 L46 25.6 L49.8 26.1 L51.6 23.5 L51.8 23.8 L51.7 23.2 L52.6 26.2 L53.7 26.7 L53.8 27.4 L51.9 29 L51.2 30.6 L50.2 30.9 L52.5 30 L52.5 31.3 L54.4 31.1 L54.1 32.3 L54.9 30.9 L55.6 31 L56 29.8 L57.1 29.6 L59.6 30.5 L59.6 31.1 L60.2 30.7 L60.6 31.4 L60.2 31.8 L60.8 31.8 L60.2 33.1 L60.9 32 L61 32.5 L62 31.8 L64.8 32.7 L66.4 32.5 L70 35.1 L72.2 35.5 L73 38 L72.8 39.5 L70.9 42.2 L69.8 42.9 L68.6 45.2 L67.7 45.1 L67.5 51.4 L65.1 56.9 L63.8 58.1 L60.7 58.1 L59.4 59.2 L58.2 59.3 L55.9 61.3 L55.2 61.2 L55.7 61.4 L55.2 62.1 L55.6 63.5 L55.2 65.2 L51 69.8 L52.9 67.7 L52 67.1 L52 68.1 L49.3 71.9 L49.7 70.6 L48.8 69.7 L46.5 68.2 L46 68.5 L44.9 67.2 L43.9 67.4 Z"
+    fill="#D0FAE5"
+    stroke="#9DC4FF"
+    stroke-linejoin="round"
+    stroke-width="2.5"
+  />
+  <circle cx="60" cy="57" r="7.6" fill="#FA5B01"/>
+  <path d="M60 52.8v5.1" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2.4"/>
+  <circle cx="60" cy="61.6" r="1.3" fill="#FFFFFF"/>
+  <path
+    d="M29 75c5-3.4 10-3.4 15 0s10 3.4 15 0"
+    fill="none"
+    stroke="#007A55"
+    stroke-linecap="round"
+    stroke-width="3.4"
+  />
+</svg>

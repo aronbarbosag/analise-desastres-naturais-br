@@ -1,0 +1,27 @@
+﻿periodo,ano_inicio,ano_fim,fenomeno,intensidade,intensidade_rank,sinal_oni
+1991-92,1991,1992,El Niño,Strong,3,1
+1994-95,1994,1995,El Niño,Moderate,2,1
+1995-96,1995,1996,La Niña,Moderate,2,-1
+1997-98,1997,1998,El Niño,Very Strong,4,1
+1998-99,1998,1999,La Niña,Strong,3,-1
+1999-00,1999,2000,La Niña,Strong,3,-1
+2000-01,2000,2001,La Niña,Weak,1,-1
+2002-03,2002,2003,El Niño,Moderate,2,1
+2004-05,2004,2005,El Niño,Weak,1,1
+2005-06,2005,2006,La Niña,Weak,1,-1
+2006-07,2006,2007,El Niño,Weak,1,1
+2007-08,2007,2008,La Niña,Strong,3,-1
+2008-09,2008,2009,La Niña,Weak,1,-1
+2009-10,2009,2010,El Niño,Moderate,2,1
+2010-11,2010,2011,La Niña,Strong,3,-1
+2011-12,2011,2012,La Niña,Moderate,2,-1
+2014-15,2014,2015,El Niño,Weak,1,1
+2015-16,2015,2016,El Niño,Very Strong,4,1
+2016-17,2016,2017,La Niña,Weak,1,-1
+2017-18,2017,2018,La Niña,Weak,1,-1
+2018-19,2018,2019,El Niño,Weak,1,1
+2019-20,2019,2020,El Niño,Weak,1,1
+2020-21,2020,2021,La Niña,Moderate,2,-1
+2021-22,2021,2022,La Niña,Moderate,2,-1
+2022-23,2022,2023,La Niña,Weak,1,-1
+2023-24,2023,2024,El Niño,Strong,3,1
