@@ -1,0 +1,268 @@
+{
+  "Crato-CE": [
+    {
+      "scope": "municipio",
+      "years": [2022],
+      "keywords": ["prejuizo publico", "prejuízo público", "chuvas intensas", "enxurrada", "crato"],
+      "summary": "O destaque de Crato em prejuízo público pode estar ligado a episódios de chuva intensa no Cariri. Em janeiro de 2022, a prefeitura registrou chuva acima de 100 mm, mutirões emergenciais e impactos no entorno do Canal do Rio Granjeiro, uma área historicamente sensível a enxurradas urbanas.",
+      "sources": [
+        {
+          "name": "Prefeitura do Crato, 26/01/2022",
+          "url": "https://crato.ce.gov.br/informa.php?id=2804"
+        }
+      ]
+    }
+  ],
+  "Iconha-ES": [
+    {
+      "scope": "municipio",
+      "years": [2020],
+      "keywords": ["prejuizo privado", "prejuízo privado", "prejuizo total", "prejuízo total", "inundacoes", "inundações", "enchente", "enxurrada", "iconha"],
+      "summary": "Iconha aparece como ponto econômico sensível porque, em janeiro de 2020, viveu uma das maiores enchentes de sua história: o rio Iconha transbordou, o centro foi fortemente atingido, o hospital alagou e comércios tiveram perdas expressivas. Reportagens posteriores citaram prejuízos municipais acima de R$ 170 milhões.",
+      "sources": [
+        {
+          "name": "Folha Vitória, impactos das chuvas em Iconha",
+          "url": "https://www.folhavitoria.com.br/geral/mortes-e-destruicao-moradores-de-iconha-relembram-os-impactos-das-fortes-chuvas-em-2019/"
+        },
+        {
+          "name": "Folha Vitória, recursos e prejuízos após enchentes",
+          "url": "https://www.folhavitoria.com.br/geral/municipios-do-es-reclamam-que-ainda-nao-receberam-recursos-para-recuperacao-apos-enchentes/"
+        }
+      ]
+    }
+  ],
+  "Jaboatão dos Guararapes-PE": [
+    {
+      "scope": "municipio",
+      "years": [2022],
+      "keywords": ["obitos", "óbitos", "mortes", "chuvas intensas", "deslizamento", "pernambuco", "jaboatao", "jaboatão"],
+      "summary": "Quando Jaboatão dos Guararapes aparece em rankings humanos, o contexto provável é a sequência de chuvas e deslizamentos que atingiu a Região Metropolitana do Recife em 2022. O episódio teve grande peso em óbitos e desalojamentos, especialmente em áreas de encosta e ocupação vulnerável.",
+      "sources": [
+        {
+          "name": "UOL, chuvas no Grande Recife em 2022",
+          "url": "https://noticias.uol.com.br/cotidiano/ultimas-noticias/2022/05/28/no-recife-ate-agora-27-pessoas-morreram-vitimas-das-chuvas-deste-sabado.htm"
+        }
+      ]
+    }
+  ],
+  "Maceió-AL": [
+    {
+      "scope": "municipio",
+      "years": [2018, 2019, 2020, 2023, 2024],
+      "keywords": ["danos materiais", "prejuizo privado", "prejuízo privado", "prejuizo publico", "prejuízo público", "prejuizo total", "prejuízo total", "maceio", "maceió", "afundamento", "subsidencia", "subsistência", "braskem"],
+      "summary": "O peso de Maceió em danos materiais e prejuízos é compatível com o desastre geológico ligado à mineração de sal-gema, que provocou subsidência, rachaduras, evacuação de bairros e perda de imóveis. A crise, monitorada pela Defesa Civil, é frequentemente descrita como um dos maiores desastres urbanos do país.",
+      "sources": [
+        {
+          "name": "CNN Brasil, monitoramento da Defesa Civil em Maceió",
+          "url": "https://www.cnnbrasil.com.br/nacional/em-maceio-solo-em-area-de-risco-afundou-57-cm-em-24-h-diz-defesa-civil/"
+        },
+        {
+          "name": "AP News, salt mine catastrophe in Maceió",
+          "url": "https://apnews.com/article/77be57ffa1e8e4c1765f64a6829c9511"
+        }
+      ]
+    }
+  ],
+  "Nova Friburgo-RJ": [
+    {
+      "scope": "municipio",
+      "years": [2011],
+      "keywords": ["obitos", "óbitos", "mortes", "danos materiais", "chuvas intensas", "deslizamento", "nova friburgo", "regiao serrana", "região serrana"],
+      "summary": "Nova Friburgo tende a se destacar por causa da tragédia da Região Serrana de janeiro de 2011, quando chuvas extremas causaram enxurradas e deslizamentos em encostas. O evento concentrou mortes, destruição de moradias e perdas urbanas em vários municípios serranos.",
+      "sources": [
+        {
+          "name": "Terra, balanço da Região Serrana de 2011",
+          "url": "https://www.terra.com.br/noticias/brasil/sobe-para-905-o-n-de-mortos-pela-chuva-na-regiao-serrana-do-rj%2Cd50b44fa607da310VgnCLD200000bbcceb0aRCRD.html"
+        }
+      ]
+    }
+  ],
+  "PE": [
+    {
+      "scope": "uf",
+      "years": [2022],
+      "keywords": ["obitos", "óbitos", "mortes", "desabrigados", "desalojados", "chuvas intensas", "pernambuco", "pe"],
+      "summary": "O peso de Pernambuco em indicadores humanos pode ser associado às chuvas de 2022 na Região Metropolitana do Recife e Zona da Mata, marcadas por deslizamentos, alagamentos e elevado número de mortes em áreas vulneráveis.",
+      "sources": [
+        {
+          "name": "UOL, chuvas no Grande Recife em 2022",
+          "url": "https://noticias.uol.com.br/cotidiano/ultimas-noticias/2022/05/28/no-recife-ate-agora-27-pessoas-morreram-vitimas-das-chuvas-deste-sabado.htm"
+        }
+      ]
+    }
+  ],
+  "Petrópolis-RJ": [
+    {
+      "scope": "municipio",
+      "years": [2022],
+      "keywords": ["obitos", "óbitos", "mortes", "danos materiais", "chuvas intensas", "deslizamento", "petropolis", "petrópolis"],
+      "summary": "O destaque de Petrópolis em óbitos e danos se relaciona ao desastre de fevereiro de 2022: chuvas muito intensas em poucas horas desencadearam enxurradas e deslizamentos em áreas urbanas de encosta, com mais de 230 mortes registradas em levantamentos técnicos.",
+      "sources": [
+        {
+          "name": "Governo Federal, mobilização em Petrópolis em 2022",
+          "url": "https://www.gov.br/pt-br/noticias/assistencia-social/2022/02/governo-federal-por-meio-da-defesa-civil-nacional-se-mobiliza-para-prestar-auxilio-a-petropolis-rj-apos-fortes-chuvas-no-municipio"
+        },
+        {
+          "name": "Defesa Civil RJ/CEMADEN, resumo técnico Petrópolis 2022",
+          "url": "https://www.defesacivil.rj.gov.br/images/CEPEDEC/RESUMOS/MAPEAMENTO-DA-DISTRIBUIO-PLUVIOMTRICA-E-DAS-REAS-AFETADAS-NO-DESASTRE-DE-PETRPOLIS---FEV_2023.pdf"
+        }
+      ]
+    }
+  ],
+  "RJ": [
+    {
+      "scope": "uf",
+      "years": [2011],
+      "keywords": ["obitos", "óbitos", "mortes", "rj", "rio de janeiro", "nova friburgo", "teresopolis", "teresópolis", "petropolis", "petrópolis"],
+      "summary": "A liderança do RJ em óbitos é fortemente associada à tragédia da Região Serrana em janeiro de 2011, com enxurradas e deslizamentos em Nova Friburgo, Teresópolis, Petrópolis, Sumidouro e municípios vizinhos; balanços da época registraram mais de 900 mortes.",
+      "sources": [
+        {
+          "name": "Terra, balanço da Região Serrana de 2011",
+          "url": "https://www.terra.com.br/noticias/brasil/sobe-para-905-o-n-de-mortos-pela-chuva-na-regiao-serrana-do-rj%2Cd50b44fa607da310VgnCLD200000bbcceb0aRCRD.html"
+        }
+      ]
+    },
+    {
+      "scope": "uf",
+      "years": [2010],
+      "keywords": ["obitos", "óbitos", "mortes", "rj", "rio de janeiro", "niteroi", "niterói", "morro do bumba"],
+      "summary": "Outro episódio relevante no RJ ocorreu em abril de 2010, quando temporais causaram enchentes e deslizamentos na Região Metropolitana; o Morro do Bumba, em Niterói, tornou-se um dos símbolos do desastre.",
+      "sources": [
+        {
+          "name": "Agência Brasil, Morro do Bumba em 2010",
+          "url": "https://memoria.ebc.com.br/agenciabrasil//noticia/2010-04-08/deslizamento-em-morro-de-niteroi-pode-ter-atingido-200-pessoas-diz-corpo-de-bombeiros"
+        }
+      ]
+    },
+    {
+      "scope": "municipio",
+      "years": [2022],
+      "keywords": ["obitos", "óbitos", "mortes", "petropolis", "petrópolis", "chuvas intensas"],
+      "summary": "Em fevereiro de 2022, Petrópolis voltou a registrar desastre severo por chuvas intensas, com cerca de 200 mm em menos de 4 horas segundo o Governo Federal; estudos da Defesa Civil/SGB registram enxurradas, deslizamentos e mais de 230 mortes.",
+      "sources": [
+        {
+          "name": "Governo Federal, mobilização em Petrópolis em 2022",
+          "url": "https://www.gov.br/pt-br/noticias/assistencia-social/2022/02/governo-federal-por-meio-da-defesa-civil-nacional-se-mobiliza-para-prestar-auxilio-a-petropolis-rj-apos-fortes-chuvas-no-municipio"
+        },
+        {
+          "name": "Defesa Civil RJ/CEMADEN, resumo técnico Petrópolis 2022",
+          "url": "https://www.defesacivil.rj.gov.br/images/CEPEDEC/RESUMOS/MAPEAMENTO-DA-DISTRIBUIO-PLUVIOMTRICA-E-DAS-REAS-AFETADAS-NO-DESASTRE-DE-PETRPOLIS---FEV_2023.pdf"
+        }
+      ]
+    }
+  ],
+  "Rio do Sul-SC": [
+    {
+      "scope": "municipio",
+      "years": [2015],
+      "keywords": ["prejuizo privado", "prejuízo privado", "inundacoes", "inundações", "enchente", "rio do sul"],
+      "summary": "O pico de Rio do Sul em prejuízo privado é coerente com a cheia de outubro de 2015 no rio Itajaí-Açu: reportagens registraram o rio em 10,71 m, 22 dos 26 bairros alagados e perdas empresariais estimadas em R$ 73,4 milhões nos setores industrial, comercial, serviços, agricultura e pecuária.",
+      "sources": [
+        {
+          "name": "Folha de S.Paulo, 23/10/2015",
+          "url": "https://m.folha.uol.com.br/cotidiano/2015/10/1697511-rio-do-sul-esta-em-estado-de-emergencia-e-tem-22-bairros-alagados.shtml"
+        },
+        {
+          "name": "NSC Total, balanço do setor empresarial",
+          "url": "https://www.nsctotal.com.br/noticias/setor-empresarial-de-rio-do-sul-estima-perdas-de-r-734-milhoes-com-a-enchente"
+        }
+      ]
+    },
+    {
+      "scope": "municipio",
+      "years": [2017],
+      "keywords": ["prejuizo privado", "prejuízo privado", "prejuizo publico", "prejuízo público", "inundacoes", "inundações", "enchente", "rio do sul"],
+      "summary": "Em 2017, novas chuvas e enchentes no Vale do Itajaí voltaram a pressionar Rio do Sul; a cobertura regional destacou prejuízos públicos relevantes em Rio do Sul e Blumenau, além do impacto econômico acumulado de enchentes recorrentes em 2013, 2015 e 2017.",
+      "sources": [
+        {
+          "name": "NSC Total, prejuízos das chuvas de 2017",
+          "url": "https://www.nsctotal.com.br/noticias/prejuizo-das-chuvas-no-vale-do-itajai-ultrapassa-r-100-milhoes"
+        }
+      ]
+    }
+  ],
+  "RS": [
+    {
+      "scope": "uf",
+      "years": [2024],
+      "keywords": ["prejuizo privado", "prejuízo privado", "prejuizo publico", "prejuízo público", "prejuizo total", "prejuízo total", "danos materiais", "enchentes", "inundacoes", "inundações", "rio grande do sul", "rs"],
+      "summary": "O destaque do RS em prejuízos recentes pode ser associado às enchentes de abril e maio de 2024, desastre de grande intensidade que atingiu a maior parte dos municípios gaúchos, com danos em moradias, infraestrutura, agricultura, indústria, transporte, educação e saúde.",
+      "sources": [
+        {
+          "name": "Governo do RS, decreto de calamidade e municípios atingidos",
+          "url": "https://www.estado.rs.gov.br/decreto-especifica-municipios-atingidos-por-cheias-de-rios"
+        },
+        {
+          "name": "IBGE, MUNIC 2024 sobre evento climático no RS",
+          "url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/44892-munic-2024-evento-climatico-afetou-mais-de-90-dos-municipios-do-rio-grande-do-sul"
+        }
+      ]
+    },
+    {
+      "scope": "uf",
+      "years": [2022],
+      "keywords": ["prejuizo privado", "prejuízo privado", "estiagem", "seca", "agropecuaria", "agropecuária", "rio grande do sul", "rs"],
+      "summary": "Em perdas privadas ligadas à estiagem, o RS também tem contexto forte: a seca de 2022 reduziu fortemente a produção agropecuária, derrubou soja, milho e outras culturas e contribuiu para retração de 5,1% no PIB estadual segundo o governo gaúcho.",
+      "sources": [
+        {
+          "name": "Governo do RS, impacto da estiagem no PIB de 2022",
+          "url": "https://www.estado.rs.gov.br/estiagem-provoca-queda-de-5-1-do-pib-do-rs-em-2022"
+        },
+        {
+          "name": "Governo do RS, propriedades atingidas pela estiagem",
+          "url": "https://estado.rs.gov.br/sobe-para-257-mil-o-numero-de-propriedades-atingidas-pela-estiagem-no-estado"
+        }
+      ]
+    }
+  ],
+  "São Leopoldo-RS": [
+    {
+      "scope": "municipio",
+      "years": [2024],
+      "keywords": ["danos materiais", "prejuizo privado", "prejuízo privado", "prejuizo publico", "prejuízo público", "enchente", "inundacao", "inundação", "sao leopoldo", "são leopoldo"],
+      "summary": "São Leopoldo aparece como município crítico por causa da enchente de maio de 2024 no Vale do Sinos. Reportagens locais e a prefeitura registraram bairros submersos, rede pública danificada, abrigos emergenciais e milhares de negócios atingidos, o que ajuda a explicar picos de danos e prejuízos.",
+      "sources": [
+        {
+          "name": "Prefeitura de São Leopoldo, regiões atingidas na enchente de maio",
+          "url": "https://www.saoleopoldo.rs.gov.br/noticia/34678?titulo=Mesmo+com+acumulado+de+chuva%2C+S%C3%A3o+Leopoldo+n%C3%A3o+registra+maiores+transtornos+em+regi%C3%B5es+atingidas+durante+a+enchente+de+maio"
+        },
+        {
+          "name": "ABC+, empresas atingidas pela inundação",
+          "url": "https://www.abcmais.com/brasil/rio-grande-do-sul/vale-do-rio-dos-sinos/sao-leopoldo/empresas-leopoldenses-atingidas-pela-inundacao-buscam-auxilio-para-recomecar/"
+        }
+      ]
+    }
+  ],
+  "São Sebastião-SP": [
+    {
+      "scope": "municipio",
+      "years": [2023],
+      "keywords": ["obitos", "óbitos", "mortes", "danos materiais", "chuvas intensas", "deslizamento", "litoral norte", "sao sebastiao", "são sebastião"],
+      "summary": "O destaque de São Sebastião em óbitos se relaciona às chuvas extremas de fevereiro de 2023 no Litoral Norte paulista, quando deslizamentos e enxurradas atingiram especialmente a Barra do Sahy e outras áreas vulneráveis; balanços registraram dezenas de mortes no município.",
+      "sources": [
+        {
+          "name": "UOL, boletim das chuvas no litoral de SP",
+          "url": "https://noticias.uol.com.br/cotidiano/ultimas-noticias/2023/02/23/boletim-chuvas-litoral-sp.htm"
+        },
+        {
+          "name": "Governo de SP, ações no Litoral Norte",
+          "url": "https://www.saopaulo.sp.gov.br/ultimas-noticias/litoral-norte-como-ajudar/"
+        }
+      ]
+    }
+  ],
+  "Teresópolis-RJ": [
+    {
+      "scope": "municipio",
+      "years": [2011],
+      "keywords": ["obitos", "óbitos", "mortes", "danos materiais", "chuvas intensas", "deslizamento", "teresopolis", "teresópolis", "regiao serrana", "região serrana"],
+      "summary": "Teresópolis tende a aparecer em rankings de óbitos e danos pela tragédia da Região Serrana de 2011, quando enxurradas e deslizamentos atingiram bairros e áreas de encosta, concentrando perdas humanas e materiais junto a Nova Friburgo e Petrópolis.",
+      "sources": [
+        {
+          "name": "Terra, balanço da Região Serrana de 2011",
+          "url": "https://www.terra.com.br/noticias/brasil/sobe-para-905-o-n-de-mortos-pela-chuva-na-regiao-serrana-do-rj%2Cd50b44fa607da310VgnCLD200000bbcceb0aRCRD.html"
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,8 @@ dependencies = [
     "numpy>=2.4.5",
     "openpyxl>=3.1.5",
     "pandas>=3.0.3",
+    "plotly>=5.24.1",
+    "pydantic-ai-slim[google]>=1.104.0",
     "seaborn>=0.13.2",
     "streamlit>=1.57.0",
     "taskipy>=1.14.1",
@@ -22,7 +24,7 @@ dev = [
 
 
 [tool.taskipy.tasks]
-start = "uv run streamlit run frontend/app.py --server.port=8502"
+start = "uv run streamlit run frontend/app.py --server.port=8503"
 pre_format = "uv run ruff check --fix ."
 format = "uv run ruff format ."
 post_format = "uv run ruff check ."

@@ -1,0 +1,310 @@
+{
+  "Afetados diretos por ano": {
+    "insight": "Os afetados diretos anualmente tiveram um aumento expressivo de 21.435 em 1991 para 13.363.170 em 2025, com o maior registro em 2017 com 19.399.977 pessoas.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "d31223f108e8bc2b51f41bd949a18073d615aaae4199c345bc2f7d768b714e3d",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  },
+  "Afetados diretos por tipologia": {
+    "insight": "Estiagem e Seca impactaram massivamente os afetados diretos (132.202.814), superando em muito outros tipos de desastres como inundações e chuvas intensas.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "9848bad7e84edbc8ffff2d397e3d8849bf403d41aa607dbc1d23d712d3429980",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  },
+  "Combinações UF/ENSO com maior impacto": {
+    "insight": "O Rio de Janeiro (La Niña) concentrou o maior número de impactos (1.568), em grande parte devido à tragédia da Região Serrana em 2011.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "3f8dbe047d32e69c209a7a9ec0b52b8f36a119ba149113a38141104c50a28d26",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Combinações UF/ENSO com mais desabrigados": {
+    "insight": "O Amazonas (El Niño) registrou o maior número de desabrigados (190.197), associado a este padrão climático no período.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "7e033e457f67573f33551131214e291f8bfb1464b630a62029171dcdf636bc3c",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Combinações município/ENSO com maior impacto": {
+    "insight": "Petrópolis-RJ (La Niña) apresentou o maior número de impactos (451), possivelmente reflexo de eventos como a tragédia da Região Serrana de 2011.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "b935ae6a12dd74bc13206ef83151f4dad996a6c1d7ccb0e4891e2f5ff8cc6d20",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Combinações região/ENSO com mais óbitos": {
+    "insight": "A região Sudeste (La Niña) concentrou o maior número de óbitos (2.368), sendo significativamente maior que as demais combinações regionais/ENSO.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "6544f1cffca7019cb7f732af2029bfb096009c0dca9cc4761add716ea70a5d82",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Danos materiais por ano": {
+    "insight": "Os danos materiais apresentaram um crescimento expressivo entre 1991 (R$ 0,00) e 2025 (R$ 4,92 bilhões), com picos notáveis em 2011 (R$ 14,32 bi) e 2009 (R$ 11,93 bi).",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "29263a8643acac4040b8e96dcda9ba18925568c7103bcf696e054f962e3d3552",
+    "updated_at": 1780251659,
+    "version": "v4-local-causality"
+  },
+  "Danos materiais por categoria": {
+    "insight": "Infraestrutura é a categoria com maior impacto financeiro, totalizando R$ 82,94 bilhões em danos materiais no período de 1991-2025.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "dcdc6c2ce22623f2f39f0d0f295ad41bba816adaa9824158b1e1a69f645ea587",
+    "updated_at": 1780251659,
+    "version": "v4-local-causality"
+  },
+  "Danos materiais por mês": {
+    "insight": "Janeiro concentra os maiores danos materiais, com R$ 34,37 bilhões, seguido por Março (R$ 21,77 bi) e Abril (R$ 17,45 bi), indicando um padrão sazonal de eventos extremos.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "e3cab0e79adc5972fa79560cd6e9194f79a1ae4fe102c1e315a50c694793dc21",
+    "updated_at": 1780251659,
+    "version": "v4-local-causality"
+  },
+  "Danos materiais por tipologia": {
+    "insight": "Enxurradas lideram os danos materiais por tipologia, com R$ 49,16 bilhões, seguidas por Chuvas Intensas (R$ 42,26 bi) e Inundações (R$ 27,88 bi) no período de 1991-2025.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "d989775c4611c872c4fb92a7da17160c2ed927775c3a3d6e5f45f84b51e0e0e6",
+    "updated_at": 1780251659,
+    "version": "v4-local-causality"
+  },
+  "Desabrigados + desalojados por ano": {
+    "insight": "O número de desabrigados e desalojados anualmente cresceu de 20.847 em 1991 para 410.215 em 2025, atingindo um pico de 1.125.331 em 2024.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "862fd8778761db37e4cef8b4ee7c58801d34545b1a0a5ab9d4ed18fbd0a41b43",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  },
+  "Desabrigados + desalojados por tipologia": {
+    "insight": "Inundações foram a tipologia com maior número de desabrigados e desalojados (4.071.736), indicando o impacto significativo deste tipo de desastre.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "f58d7f9e7d7725502b5074fcc8da0a274859cd782a35d78cad194d68d0fed689",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  },
+  "Distribuição por grupo": {
+    "insight": "Os registros de desastres naturais estão distribuídos entre as diferentes categorias, com variações significativas entre elas, merecendo análise detalhada de cada grupo.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "e51f32f3c5a304defbecdb7e533c2ee5f8b12247a390c04d43fb9879cf935f29",
+    "updated_at": 1780250446,
+    "version": "v4-local-causality"
+  },
+  "Impactos humanos por tipo de ENSO": {
+    "insight": "Durante o fenômeno El Niño, o impacto em termos de pessoas desabrigadas, desalojadas e mortas foi mais que o quíntuplo do período Neutro, totalizando 5.161.002.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "7352bfbdac758d7cc273fd7ddabf6f58b9bb4767faa7fd01c2e2878dcdd53ca2",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Municípios com mais registros": {
+    "insight": "Campo Grande-MS se destaca como o município com maior número de registros de desastres naturais, totalizando 223 ocorrências, refletindo uma concentração de eventos nesta localidade.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "1bd497abfefcb18798be30b07119d1e8285d0e10c99b820abc4e09729bb021f3",
+    "updated_at": 1780250446,
+    "version": "v4-local-causality"
+  },
+  "Municípios por afetados diretos": {
+    "insight": "Brasília-DF registra o maior número de afetados diretos (2.144.821), superando municípios com histórico recente de chuvas intensas como os de Pernambuco em 2022.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "e1b7af5d4041765f49c529680ff7244e100f2ec96af4a7dd08c781427317252f",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  },
+  "Municípios por danos materiais": {
+    "insight": "Maceió-AL se destaca com R$ 11,40 bilhões em danos materiais, um valor compatível com o desastre geológico ligado à mineração de sal-gema que afetou a cidade.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "b0cb4b52e00c90448c5c0127312d95fc3094610e9f007e046b7c52ddeb2800bc",
+    "updated_at": 1780251659,
+    "version": "v4-local-causality"
+  },
+  "Municípios por prejuízo privado": {
+    "insight": "Rio do Sul-SC lidera o prejuízo privado municipal com R$ 13,65 bilhões, coerente com a cheia de 2015 que alagou 22 bairros e causou perdas significativas na região.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "49e9796f97c5973d5f1586082f839d92f7a1e1b4687f7d10666a35691527b025",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Municípios por prejuízo público": {
+    "insight": "Crato-CE apresentou o maior prejuízo público municipal com R$ 1,25 bilhão, possivelmente associado a eventos de chuva intensa no Cariri, como o registrado em janeiro de 2022.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "6b9ac9670aad19ff73708df9fb0f18c1940fbe3289bfbe37d5743513f0e7e4c6",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Média anual de afetados diretos nos eventos-alvo": {
+    "insight": "O Nordeste foi a região mais afetada por Seca/estiagem, totalizando 9.358.879 pessoas, um número muito superior aos demais eventos.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "36d33fd38317a20a25570358a529286bed156b27b15c99cd23e5e3dc2a5a5efc",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Média anual de desabrigados por tipo de ENSO": {
+    "insight": "El Niño está associado a um maior número de desabrigados anualmente (72.760), superando os períodos Neutro e La Niña.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "9aa8e9b6d9367c033778dde0c553453d2f2a7c8b9cfc8e60bb84edb897b8b65b",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Média anual de eventos-alvo por tipo de ENSO": {
+    "insight": "Eventos de Seca/estiagem no Nordeste foram a tipologia mais frequente (2.213), superando as Chuvas/enchentes no Sul (957).",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "67302318f433d1eec10f90e03ccd3f1c5db2af1b62c7b7cd009d45c764d6cac0",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Média anual de óbitos por tipo de ENSO": {
+    "insight": "La Niña está associada a um número de óbitos anualmente superior (198), diferindo do período Neutro (111) e El Niño (123).",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "0e8cb2b4aea8e3f89613a75f1442b8c493598b9f170dd76c63dce8f4d0d49f0c",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Prejuízo privado por ano": {
+    "insight": "O prejuízo privado disparou em 2022, atingindo R$ 65,83 bilhões, refletindo um aumento expressivo em comparação com anos anteriores no recorte 1991-2025.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "4f073d83b320d3307d0c1a7ab9d81229fb29548765f17f7144be0fbbd3411e78",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Prejuízo privado por mês": {
+    "insight": "Janeiro também lidera o prejuízo privado mensal com R$ 125,86 bilhões, sugerindo que eventos de grande impacto podem ocorrer no início do ano.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "61576394df5529f46736ecfc441fd56c04452e41a63a8950fef619c67ab0599a",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Prejuízo privado por setor econômico": {
+    "insight": "A agricultura foi o setor econômico com o maior prejuízo privado, totalizando R$ 390,99 bilhões, seguida por pecuária e comércio, com perdas superiores a R$ 57 bilhões.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "f4d7de36917848d4c4c596382d5329bf370e72028c1489b50a019cf910e96f29",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Prejuízo público por ano": {
+    "insight": "O prejuízo público público apresentou um crescimento acentuado entre 1991 e 2025, com o ano de 2017 registrando o maior valor, totalizando R$ 8,65 bilhões.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "e00da999470ca039ba15e3145c3571988b9afa5aae176e6e428a20c5ca2059dc",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Prejuízo público por mês": {
+    "insight": "Janeiro concentra o maior prejuízo público mensal com R$ 8,85 bilhões, indicando um padrão sazonal de impactos.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "14f4c146cc90edce2183b0eac947df4cd01ed2c186a7c3de409e674a99adf3eb",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Prejuízo público por serviço essencial": {
+    "insight": "O abastecimento de água foi o serviço essencial com maior prejuízo público, totalizando R$ 36,11 bilhões, com transporte e esgotamento sanitário também em destaque.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "dd4a0c8670e8e0b210722e1c8de11f8fbd135568426f8d6241ac2d4f82349449",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Prejuízo total por tipologia": {
+    "insight": "Estiagem e Seca causaram o maior prejuízo total no Brasil com R$ 459,56 bilhões, mais de cinco vezes o valor de Chuvas Intensas, indicando seu impacto predominante.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "ad3abea5fb8cf5bd20c236c2bce1bd6eaf8af71f63ca06932d2319c817758a90",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "Ranking de UFs por registros": {
+    "insight": "O Rio Grande do Sul lidera em registros de desastres, com 10.091 ocorrências, possivelmente associado às enchentes de 2024 que causaram grande impacto no estado.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "13e7c7e70b089d9527093a20d30a81ed8f5be07aa11ad5c86b31b82fe1bfa5a9",
+    "updated_at": 1780250446,
+    "version": "v4-local-causality"
+  },
+  "Registros por ano": {
+    "insight": "O número de registros de desastres naturais mais que decuplicou entre 1991 e 2025, com picos em 2023 e 2022, indicando uma tendência de alta.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "5988b107aa333154c094c274a0217b557c5bcad4940b5ca3203aef597d93db8e",
+    "updated_at": 1780250446,
+    "version": "v4-local-causality"
+  },
+  "Registros por mês": {
+    "insight": "Janeiro concentra o maior número de registros de desastres naturais, totalizando 10.852 ocorrências, sugerindo um padrão sazonal.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "388aa883d51c4efa91d72baa44b301e7382ea24b4cba4232aa0f64388174d621",
+    "updated_at": 1780250446,
+    "version": "v4-local-causality"
+  },
+  "Região x tipo de ENSO": {
+    "insight": "As regiões Sul e Sudeste registram um número expressivo de eventos associados a La Niña e El Niño, respectivamente.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "99f08166c07944277252dc7b5ac9190cfab5cf021c220a21508cb7cb27876009",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Série anual do indicador selecionado por tipo de ENSO": {
+    "insight": "O ano de 2011 apresentou o pico de eventos (957), possivelmente associado a outros padrões climáticos além do ENSO.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "0a700d3738f95f26dc223c265f03dd42400f955f2d63b9293d2af316fb5675da",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Tipologia x tipo de ENSO": {
+    "insight": "Estiagem e Seca, que ocorrem com maior frequência no Nordeste, são as tipologias predominantes no período analisado.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "2654e498bf3eee396e507763e440ded2e7ff5211aff2135ce5071427b1047b35",
+    "updated_at": 1780250455,
+    "version": "v4-local-causality"
+  },
+  "Tipologias mais frequentes": {
+    "insight": "Estiagem e Seca representam a tipologia predominante de desastres naturais no período, totalizando 33.493 registros, muito acima de outras categorias como Enxurradas e Chuvas Intensas.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "f92e434d9f4335229ac1874979315b44f0c94bf4f6a181a1e133846b64a83d7e",
+    "updated_at": 1780250446,
+    "version": "v4-local-causality"
+  },
+  "UFs por danos materiais": {
+    "insight": "O Rio de Janeiro lidera em danos materiais com R$ 18,19 bilhões, seguido de perto por Minas Gerais (R$ 17,98 bi) e Rio Grande do Sul (R$ 17,10 bi), sendo que o pico gaúcho em prejuízos recentes pode estar associado às enchentes de abril e maio de 2024.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "fa44a4c7cfc63a7600ca1708de2102a1fc9fd69f3016098261aa6d649eefb85e",
+    "updated_at": 1780251659,
+    "version": "v4-local-causality"
+  },
+  "UFs por prejuízo privado": {
+    "insight": "O Rio Grande do Sul teve o maior prejuízo privado com R$ 155,40 bilhões, possivelmente impactado pelas enchentes de 2024 que afetaram extensivamente o estado.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "4f829ec5682d2e73481668732f51e065caa96c78c14ad7420dbe49cd785ea750",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "UFs por prejuízo público": {
+    "insight": "A Paraíba lidera o prejuízo público com R$ 9,50 bilhões, seguida por Pernambuco e Ceará, totalizando R$ 23,78 bilhões, evidenciando concentração regional.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "0a7463d4615c0b91948ee81d180f6fd215b7bffc2415f243411fbb3b59cd457b",
+    "updated_at": 1780250526,
+    "version": "v4-local-causality"
+  },
+  "UFs por óbitos": {
+    "insight": "O Rio de Janeiro lidera em óbitos (1.807) devido à tragédia da Região Serrana em 2011, que causou mais de 900 mortes.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "bbc1e53f3df82d1c4179faaab7c729b4ca12d37f1976793209062afcfed1147b",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  },
+  "Óbitos por ano": {
+    "insight": "Os óbitos por ano mostram um aumento geral de 36 em 1991 para 87 em 2025, com picos notáveis em 2011 (957 óbitos).",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "17e7687d56fe8df16209de6079a3a7e3e3888229ef05ebd23dc16b495ad19a12",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  },
+  "Óbitos por mês": {
+    "insight": "Janeiro concentra o maior número de óbitos, com 1.800 registros, indicando uma sazonalidade específica para este tipo de ocorrência.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "0e050a85f4eaac7532d165ad3082af36ed720f72a1b75aa57007ea0d6f70dd8e",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  },
+  "Óbitos por tipologia": {
+    "insight": "Enxurradas foram a principal causa de óbitos (1.883), seguidas por Chuvas Intensas (1.293), totalizando mais de 3.000 vidas perdidas.",
+    "model": "gemini-2.5-flash-lite",
+    "signature": "4ae93854187413b4ef1f49fd90d65af57c5936380d7600f12810e15af4333833",
+    "updated_at": 1780250554,
+    "version": "v4-local-causality"
+  }
+}
