@@ -1,18 +1,47 @@
 # Dashboard de Desastres Naturais no Brasil
 
-Dashboard interativo em Streamlit para analisar registros históricos de desastres naturais no Brasil entre 1991 e 2025. O projeto cruza dados do Atlas Digital de Desastres Naturais com uma classificação anual de El Niño/La Niña, permitindo explorar registros, impactos humanos, danos materiais, prejuízos econômicos e padrões ENSO.
+Dashboard interativo em Streamlit para analisar registros históricos de desastres naturais no Brasil entre 1991 e 2025. O projeto cruza dados do Atlas Digital de Desastres Naturais com uma classificação anual de El Niño/La Niña, permitindo explorar registros, impactos humanos, danos materiais, prejuízos econômicos e padrões associados ao ENSO.
+
+## Preview
+
+> Espaço reservado para imagens da aplicação.
+
+| Visão geral | Filtros e KPIs |
+| --- | --- |
+| `assets/screenshots/dashboard-overview.png` | `assets/screenshots/filters-kpis.png` |
+
+| Gráficos e insights | Conclusões do recorte |
+| --- | --- |
+| `assets/screenshots/charts-insights.png` | `assets/screenshots/conclusions.png` |
+
+Quando adicionar as imagens, substitua os caminhos acima por tags Markdown:
+
+```md
+![Visão geral do dashboard](assets/screenshots/dashboard-overview.png)
+```
 
 ## Principais Recursos
 
 - Filtros por período, região, UF, município, mês, tipologia, status e fenômeno ENSO.
 - KPIs gerais, humanos, materiais e econômicos.
 - Gráficos interativos com Plotly.
-- Cache de dataset processado em Parquet para acelerar o app.
-- Insights automáticos abaixo dos gráficos, com fallback local e opção de geração via Gemini.
-- Cache local de insights em JSON para economizar chamadas de API.
-- Seção de conclusões com achados do recorte e contexto histórico dos principais picos.
-- Tema claro customizado e responsivo.
-- Landing page estática em `index.html`.
+- Cache do dataset processado em Parquet para acelerar a abertura do app.
+- Insights automáticos abaixo dos gráficos, com fallback local e geração opcional via Gemini.
+- Cache local de insights em JSON para reduzir chamadas de API.
+- Contextos históricos curados para enriquecer a leitura dos principais picos.
+- Seção de conclusões com achados do recorte selecionado.
+- Tema claro customizado e landing page estática em `index.html`.
+
+## Stack
+
+- Python 3.12+
+- Streamlit
+- Pandas
+- Plotly
+- Pydantic AI com provider Google Gemini
+- Ruff
+- Taskipy
+- Docker e Docker Compose
 
 ## Estrutura
 
@@ -36,10 +65,11 @@ data/
   processed/                 # Parquet e cache de insights
   reference/                 # Contextos históricos curados
 notebooks/
-  analise-exploratorio.ipynb # Análise exploratória usada como apoio metodológico
+  analise-exploratorio.ipynb # Análise exploratória de apoio metodológico
 assets/
   brand/                     # Ícone/favicons
   css/, js/, figma/          # Assets da landing page
+  screenshots/               # Imagens do README
 ```
 
 ## Dados
@@ -58,58 +88,20 @@ data/processed/desastres_atlas_corrigidos_enso.parquet
 data/processed/chart_insights.json
 ```
 
-O Parquet acelera a abertura do dashboard. Ele é recriado quando os arquivos raw são atualizados.
-
-## Insights E Contexto Histórico
-
-O dashboard mostra insights abaixo de cada gráfico. A geração segue esta ordem:
-
-1. Usa insight salvo em `data/processed/chart_insights.json`, quando o cache ainda é válido.
-2. Tenta gerar insights em lote com Gemini, se as chaves estiverem configuradas.
-3. Usa fallback local quando não há chave, a API retorna erro, ocorre `429` ou o limite de uso é atingido.
-
-O fallback é enriquecido por `data/reference/disaster_contexts.json`, que reúne eventos históricos relevantes para explicar picos do dashboard. Exemplos: enchentes no Rio Grande do Sul em 2024, tragédia da Região Serrana/RJ em 2011, cheia em Rio do Sul-SC, enchente em Iconha-ES e subsidência em Maceió-AL.
-
-A seção **Conclusões** também consulta essa base para relacionar rankings e picos com possíveis eventos de contexto. Essas notas ajudam a interpretação, mas devem ser lidas como contexto histórico provável, não como prova causal automática.
-
-## Configuração Do Gemini
-
-A IA é opcional. Sem chaves, o dashboard usa os insights locais de fallback.
-
-Para usar Gemini, crie `.streamlit/secrets.toml`:
-
-```toml
-GEMINI_API_KEY = "sua-chave-principal"
-GEMINI_API_KEY_2 = "sua-chave-reserva"
-GEMINI_MODEL = "gemini-2.5-flash-lite"
-```
-
-O app tenta a primeira chave, depois a segunda. Se houver erro, limite de cota ou código `429`, ele usa fallback local e evita novas tentativas por alguns minutos.
-
-Existe um exemplo em:
-
-```text
-.streamlit/secrets.toml.example
-```
+O Parquet acelera a abertura do dashboard e é recriado quando os arquivos raw são atualizados. O JSON guarda insights gerados para reaproveitamento quando o recorte e os dados do gráfico continuam compatíveis.
 
 ## Rodando Localmente
 
-Instale as dependências com `uv`:
+Instale as dependências:
 
 ```bash
 uv sync
 ```
 
-Inicie o dashboard:
+Inicie o dashboard com a task:
 
 ```bash
-uv run streamlit run frontend/app.py --server.port=8503
-```
-
-Ou use a task:
-
-```bash
-uv run task start
+task start
 ```
 
 Acesse:
@@ -118,7 +110,52 @@ Acesse:
 http://localhost:8503
 ```
 
-## Rodando Com Docker
+## Tasks
+
+Os comandos recorrentes ficam centralizados no `pyproject.toml` via Taskipy.
+
+| Comando | Descrição |
+| --- | --- |
+| `task start` | Inicia o dashboard em `localhost:8503`. |
+| `task lint` | Executa o Ruff para verificar qualidade de código. |
+| `task format` | Aplica correções automáticas e formatação com Ruff. |
+| `task test` | Executa a suíte de testes, quando houver testes no projeto. |
+
+Para consultar as tasks disponíveis:
+
+```bash
+task --list
+```
+
+## Gemini E Insights
+
+A IA é opcional. Sem chaves configuradas, o dashboard usa insights locais de fallback.
+
+Para ativar o Gemini, crie `.streamlit/secrets.toml`:
+
+```toml
+GEMINI_API_KEY = "sua-chave-principal"
+GEMINI_API_KEY_2 = "sua-chave-reserva"
+GEMINI_MODEL = "gemini-2.5-flash-lite"
+```
+
+Existe um exemplo em:
+
+```text
+.streamlit/secrets.toml.example
+```
+
+A geração segue esta ordem:
+
+1. Usa insight salvo em `data/processed/chart_insights.json`, quando o cache ainda é válido.
+2. Tenta gerar insights em lote com Gemini, se as chaves estiverem configuradas.
+3. Usa fallback local quando não há chave, a API retorna erro, ocorre `429` ou o limite de uso é atingido.
+
+Os insights usam `data/reference/disaster_contexts.json` como curadoria auxiliar para explicar picos relevantes. Exemplos de contexto: enchentes no Rio Grande do Sul em 2024, tragédia da Região Serrana/RJ em 2011, cheia em Rio do Sul-SC, enchente em Iconha-ES e subsidência em Maceió-AL.
+
+Essas notas devem ser lidas como contexto histórico provável, não como prova causal automática. Em cruzamentos ENSO, a leitura é exploratória e indica associação temporal, não causalidade.
+
+## Docker
 
 Build e execução:
 
@@ -134,33 +171,19 @@ http://localhost:8503
 
 O `docker-compose.yml` monta o projeto em `/app`, então alterações locais no código são refletidas no container durante o desenvolvimento.
 
-## Qualidade De Código
+## Landing Page
 
-Rodar lint:
+O arquivo `index.html` contém uma landing page estática para apresentação do projeto e link para o dashboard publicado.
 
-```bash
-uv run ruff check .
-```
-
-Formatar:
-
-```bash
-uv run ruff format .
-```
-
-Aplicar correções automáticas:
-
-```bash
-uv run ruff check --fix .
-```
+Para visualizar localmente, abra o arquivo no navegador ou sirva a pasta com um servidor estático de sua preferência.
 
 ## Metodologia E Limitações
 
 - Os totais dependem dos filtros selecionados.
 - Municípios são exibidos com UF para evitar ambiguidade.
-- A classificação ENSO é anual; as comparações indicam associação temporal exploratória, não causalidade.
+- A classificação ENSO é anual; comparações indicam associação temporal exploratória, não causalidade.
 - Valores monetários dependem da planilha de valores corrigidos do Atlas.
-- Contextos históricos em `data/reference/disaster_contexts.json` são uma curadoria auxiliar para enriquecer insights, não substituem análise causal.
+- Contextos históricos em `data/reference/disaster_contexts.json` enriquecem a interpretação, mas não substituem análise causal.
 - A análise exploratória permanece em `notebooks/analise-exploratorio.ipynb` como material de apoio. O fluxo atual do app não depende de script para regenerar esse notebook.
 
 ## Fontes
