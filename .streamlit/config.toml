@@ -1,0 +1,16 @@
+[logger]
+level = "error"
+
+[client]
+showErrorDetails = "none"
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#0f5f7f"
+backgroundColor = "#f7fbfc"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#020618"
+font = "sans serif"

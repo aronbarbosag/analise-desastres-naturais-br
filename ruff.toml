@@ -28,10 +28,8 @@ exclude = [
     "venv",
 ]
 
-# Allow fix for all enabled rules (when `--fix`) is provided.
 lint.fixable = ["ALL"]
 lint.unfixable = []
 
 [format]
-# Like Black, use double quotes for strings.
 quote-style = "double"
