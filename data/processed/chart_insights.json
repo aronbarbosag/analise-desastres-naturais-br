@@ -1,17 +1,17 @@
 {
   "Afetados diretos por ano": {
-    "insight": "Os afetados diretos anualmente tiveram um aumento expressivo de 21.435 em 1991 para 13.363.170 em 2025, com o maior registro em 2017 com 19.399.977 pessoas.",
+    "insight": "Apesar da tendência geral de aumento, o ano de 2025 lidera em afetados diretos com 13,3 milhões, um crescimento de 1,7 milhão em relação a 2023, possivelmente refletindo a expansão urbana em áreas de risco ou a maior ocorrência de eventos climáticos extremos.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "d31223f108e8bc2b51f41bd949a18073d615aaae4199c345bc2f7d768b714e3d",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "00f878b68ccf6eff818f00aff6b997cc41f9b81852fff73126ea3f8209127727",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   },
   "Afetados diretos por tipologia": {
-    "insight": "Estiagem e Seca impactaram massivamente os afetados diretos (132.202.814), superando em muito outros tipos de desastres como inundações e chuvas intensas.",
+    "insight": "A Estiagem e Seca é disparada a principal causa de afetados diretos, com 41,8 milhões de pessoas, respondendo por 92,5% do total e superando Chuvas Intensas em 18 vezes, o que ressalta a dimensão e o impacto duradouro da aridez em vastas regiões do país.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "9848bad7e84edbc8ffff2d397e3d8849bf403d41aa607dbc1d23d712d3429980",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "cf10bbeb4bd3f497192fdaa28c18b187140213f603cbf17ad93451b761e904c3",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   },
   "Combinações UF/ENSO com maior impacto": {
     "insight": "O Rio de Janeiro (La Niña) concentrou o maior número de impactos (1.568), em grande parte devido à tragédia da Região Serrana em 2011.",
@@ -28,18 +28,18 @@
     "version": "v4-local-causality"
   },
   "Combinações município/ENSO com maior impacto": {
-    "insight": "Petrópolis-RJ (La Niña) apresentou o maior número de impactos (451), possivelmente reflexo de eventos como a tragédia da Região Serrana de 2011.",
+    "insight": "Petrópolis (RJ) sob La Niña registrou o maior impacto em um único município, com 325 ocorrências, superando a segunda colocada em 261 casos, uma diferença de 5,1 vezes.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "b935ae6a12dd74bc13206ef83151f4dad996a6c1d7ccb0e4891e2f5ff8cc6d20",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "41598e9913789d74011fe243a2ea4dcedd305d178db709fb37adfaa6880e9d78",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Combinações região/ENSO com mais óbitos": {
-    "insight": "A região Sudeste (La Niña) concentrou o maior número de óbitos (2.368), sendo significativamente maior que as demais combinações regionais/ENSO.",
+    "insight": "A região Sudeste sob influência de La Niña concentra o maior número de óbitos, com 434, superando a segunda colocada, Sul (El Niño), em 181 ocorrências.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "6544f1cffca7019cb7f732af2029bfb096009c0dca9cc4761add716ea70a5d82",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "3427af295311473327fdcc0147c38cde7319b47720d7f87ef85fa397de4fd42f",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Danos materiais por ano": {
     "insight": "Os danos materiais apresentaram um crescimento expressivo entre 1991 (R$ 0,00) e 2025 (R$ 4,92 bilhões), com picos notáveis em 2011 (R$ 14,32 bi) e 2009 (R$ 11,93 bi).",
@@ -70,46 +70,46 @@
     "version": "v4-local-causality"
   },
   "Desabrigados + desalojados por ano": {
-    "insight": "O número de desabrigados e desalojados anualmente cresceu de 20.847 em 1991 para 410.215 em 2025, atingindo um pico de 1.125.331 em 2024.",
+    "insight": "O ano de 2024 se destaca com 1.125.331 de desabrigados e desalojados, superando o segundo colocado, 2022, em 245 mil pessoas, o que pode indicar um evento extremo ou uma mudança na frequência e intensidade de desastres.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "862fd8778761db37e4cef8b4ee7c58801d34545b1a0a5ab9d4ed18fbd0a41b43",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "fc5c3a44bfc836f18c8235203dd0c4a0bf2d948bc333191440520c890204447e",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   },
   "Desabrigados + desalojados por tipologia": {
-    "insight": "Inundações foram a tipologia com maior número de desabrigados e desalojados (4.071.736), indicando o impacto significativo deste tipo de desastre.",
+    "insight": "Chuvas Intensas são a principal causa de desabrigados e desalojados (2.229.654), representando 72% do total e superando Inundações em 4,6 vezes, indicando que este tipo de evento tem um impacto mais severo na estrutura habitacional.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "f58d7f9e7d7725502b5074fcc8da0a274859cd782a35d78cad194d68d0fed689",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "f4d02aab5f38a1891eecb380f080812e83f813fcd96500addf193106f8dd75c6",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   },
   "Distribuição por grupo": {
-    "insight": "Os registros de desastres naturais estão distribuídos entre as diferentes categorias, com variações significativas entre elas, merecendo análise detalhada de cada grupo.",
+    "insight": "A distribuição dos registros por grupo revela a concentração de eventos em determinadas categorias, com uma parcela significativa alocada nos grupos de maior incidência.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "e51f32f3c5a304defbecdb7e533c2ee5f8b12247a390c04d43fb9879cf935f29",
-    "updated_at": 1780250446,
-    "version": "v4-local-causality"
+    "signature": "1fb899eef065cf56f37999f634d348c4afaa0518e70507275b61a7cfa737d8b6",
+    "updated_at": 1780270229,
+    "version": "v6-richer-gemini-rationale"
   },
   "Impactos humanos por tipo de ENSO": {
-    "insight": "Durante o fenômeno El Niño, o impacto em termos de pessoas desabrigadas, desalojadas e mortas foi mais que o quíntuplo do período Neutro, totalizando 5.161.002.",
+    "insight": "El Niño foi responsável pela maior parte dos impactos humanos, totalizando 1.807.523, o que chama atenção pela concentração de mais de 58% dos registros nesse tipo de evento.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "7352bfbdac758d7cc273fd7ddabf6f58b9bb4767faa7fd01c2e2878dcdd53ca2",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "cf01c9fef44e8c1a59fdbae725590ea103945a31b139d2c1970ac5ed3536cf91",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Municípios com mais registros": {
-    "insight": "Campo Grande-MS se destaca como o município com maior número de registros de desastres naturais, totalizando 223 ocorrências, refletindo uma concentração de eventos nesta localidade.",
+    "insight": "Campo Grande-MS apresentou o maior número de registros, com 144 ocorrências, destacando-se significativamente dos demais municípios e apontando para uma vulnerabilidade local específica a desastres.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "1bd497abfefcb18798be30b07119d1e8285d0e10c99b820abc4e09729bb021f3",
-    "updated_at": 1780250446,
-    "version": "v4-local-causality"
+    "signature": "789976e646586acca84af86aa04abe0a4df82a34e4f81136e06828c06a3f63f2",
+    "updated_at": 1780270229,
+    "version": "v6-richer-gemini-rationale"
   },
   "Municípios por afetados diretos": {
-    "insight": "Brasília-DF registra o maior número de afetados diretos (2.144.821), superando municípios com histórico recente de chuvas intensas como os de Pernambuco em 2022.",
+    "insight": "Petrolina-PE se destaca com 519.111 afetados diretos, representando 10,9% do total e liderando por uma pequena margem sobre Caruaru-PE, o que pode ser explicado pela combinação de fatores como ocupação territorial e eventos climáticos específicos da região.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "e1b7af5d4041765f49c529680ff7244e100f2ec96af4a7dd08c781427317252f",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "a0a49ea4ba4c2898bd5f06c6370b0f626ec57b60bc7464633a984ed0c6b76a9a",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   },
   "Municípios por danos materiais": {
     "insight": "Maceió-AL se destaca com R$ 11,40 bilhões em danos materiais, um valor compatível com o desastre geológico ligado à mineração de sal-gema que afetou a cidade.",
@@ -133,32 +133,32 @@
     "version": "v4-local-causality"
   },
   "Média anual de afetados diretos nos eventos-alvo": {
-    "insight": "O Nordeste foi a região mais afetada por Seca/estiagem, totalizando 9.358.879 pessoas, um número muito superior aos demais eventos.",
+    "insight": "A combinação Seca/estiagem no Nordeste impactou um número colossal de pessoas, totalizando 17.616.715, o que representa 81,5% do total e é 5,3 vezes maior que a segunda maior média.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "36d33fd38317a20a25570358a529286bed156b27b15c99cd23e5e3dc2a5a5efc",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "18f9df87e514b655cd843daf394e1babe4efb906f6993b4afc4033e7631cc71d",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Média anual de desabrigados por tipo de ENSO": {
-    "insight": "El Niño está associado a um maior número de desabrigados anualmente (72.760), superando os períodos Neutro e La Niña.",
+    "insight": "La Niña causou a maior média anual de desabrigados, com 122.017 pessoas afetadas, superando El Niño por uma margem pequena de 7.014 pessoas.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "9aa8e9b6d9367c033778dde0c553453d2f2a7c8b9cfc8e60bb84edb897b8b65b",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "b576a5bfe3454637e1188d2a3a48ed432af0eb6683890b60b438f7ec991ef504",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Média anual de eventos-alvo por tipo de ENSO": {
-    "insight": "Eventos de Seca/estiagem no Nordeste foram a tipologia mais frequente (2.213), superando as Chuvas/enchentes no Sul (957).",
+    "insight": "Eventos de Chuva/enchentes na região Sul lideraram em média anual de eventos-alvo com 2.429 ocorrências, superando Seca/estiagem no Nordeste por apenas 286 registros.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "67302318f433d1eec10f90e03ccd3f1c5db2af1b62c7b7cd009d45c764d6cac0",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "f93287f2407dd1af56b6ab6b9df312a015a27425daa42326a0aa5332b5408c0b",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Média anual de óbitos por tipo de ENSO": {
-    "insight": "La Niña está associada a um número de óbitos anualmente superior (198), diferindo do período Neutro (111) e El Niño (123).",
+    "insight": "La Niña se destaca como o tipo de ENSO com maior média anual de óbitos, totalizando 650, com uma expressiva diferença de 400 óbitos em relação ao El Niño, sendo 2,6 vezes maior.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "0e8cb2b4aea8e3f89613a75f1442b8c493598b9f170dd76c63dce8f4d0d49f0c",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "af9e7300d9f570c968009d6ad459f380a5f5022a2d6912136b11481aae97f57a",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Prejuízo privado por ano": {
     "insight": "O prejuízo privado disparou em 2022, atingindo R$ 65,83 bilhões, refletindo um aumento expressivo em comparação com anos anteriores no recorte 1991-2025.",
@@ -210,53 +210,53 @@
     "version": "v4-local-causality"
   },
   "Ranking de UFs por registros": {
-    "insight": "O Rio Grande do Sul lidera em registros de desastres, com 10.091 ocorrências, possivelmente associado às enchentes de 2024 que causaram grande impacto no estado.",
+    "insight": "A concentração de desastres no Sul, com RS, MG e SC liderando o ranking e somando 42,6% do total, sugere vulnerabilidades regionais específicas a serem investigadas.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "13e7c7e70b089d9527093a20d30a81ed8f5be07aa11ad5c86b31b82fe1bfa5a9",
-    "updated_at": 1780250446,
-    "version": "v4-local-causality"
+    "signature": "c1aa9f44593ecb40e28f889ca26ab499a96be4c5e4ce2799a3b315d41d5a79f9",
+    "updated_at": 1780269659,
+    "version": "v6-richer-gemini-rationale"
   },
   "Registros por ano": {
-    "insight": "O número de registros de desastres naturais mais que decuplicou entre 1991 e 2025, com picos em 2023 e 2022, indicando uma tendência de alta.",
+    "insight": "O ano de 2023 liderou os registros de desastres naturais, com 5.115 ocorrências, representando 26,8% do total, o que sugere uma concentração de eventos nesse período dentro do recorte analisado.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "5988b107aa333154c094c274a0217b557c5bcad4940b5ca3203aef597d93db8e",
-    "updated_at": 1780250446,
-    "version": "v4-local-causality"
+    "signature": "42a5897fab5660b952d08763872b8f30748d1300e2279d76f33a89afb6b6cc3b",
+    "updated_at": 1780270229,
+    "version": "v6-richer-gemini-rationale"
   },
   "Registros por mês": {
-    "insight": "Janeiro concentra o maior número de registros de desastres naturais, totalizando 10.852 ocorrências, sugerindo um padrão sazonal.",
+    "insight": "Janeiro se destaca como o mês com maior número de registros de desastres, totalizando 3.235 ocorrências, o que pode indicar uma sazonalidade de chuvas intensas ou outros eventos nesse período do ano.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "388aa883d51c4efa91d72baa44b301e7382ea24b4cba4232aa0f64388174d621",
-    "updated_at": 1780250446,
-    "version": "v4-local-causality"
+    "signature": "be69e096d7bc1689dedee168766cf3dce4bd577250c70eb1c0a6903d07e80fd3",
+    "updated_at": 1780270229,
+    "version": "v6-richer-gemini-rationale"
   },
   "Região x tipo de ENSO": {
-    "insight": "As regiões Sul e Sudeste registram um número expressivo de eventos associados a La Niña e El Niño, respectivamente.",
+    "insight": "Observa-se uma associação temporal entre as regiões e os tipos de ENSO, com o Sudeste associado a La Niña e o Sul a El Niño apresentando maior número de óbitos, indicando padrões a serem explorados.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "99f08166c07944277252dc7b5ac9190cfab5cf021c220a21508cb7cb27876009",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "6acddd4403de5b295a9840f317873d74b0f412a3f9d9a913767cdc39bf0fd52c",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Série anual do indicador selecionado por tipo de ENSO": {
-    "insight": "O ano de 2011 apresentou o pico de eventos (957), possivelmente associado a outros padrões climáticos além do ENSO.",
+    "insight": "O ano de 2022 concentrou o maior número de registros do indicador selecionado, com 650, representando mais da metade do total e mais que o dobro do segundo ano mais impactado, 2024.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "0a700d3738f95f26dc223c265f03dd42400f955f2d63b9293d2af316fb5675da",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "07ba9fe543dd3f68860cc86c07cf056b950ab8b8872bda6952fa36b060a19ad6",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Tipologia x tipo de ENSO": {
-    "insight": "Estiagem e Seca, que ocorrem com maior frequência no Nordeste, são as tipologias predominantes no período analisado.",
+    "insight": "A tipologia Chuvas Intensas foi a mais frequente no período de 2022-2025, conforme o contexto geral, impactando 19.097 vezes em 4.212 municípios.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "2654e498bf3eee396e507763e440ded2e7ff5211aff2135ce5071427b1047b35",
-    "updated_at": 1780250455,
-    "version": "v4-local-causality"
+    "signature": "ef24f9ca3f88cca1a24bf211f2191816e470cfc09e1eb2b2e86fbf8f6b886fe4",
+    "updated_at": 1780269845,
+    "version": "v6-richer-gemini-rationale"
   },
   "Tipologias mais frequentes": {
-    "insight": "Estiagem e Seca representam a tipologia predominante de desastres naturais no período, totalizando 33.493 registros, muito acima de outras categorias como Enxurradas e Chuvas Intensas.",
+    "insight": "Chuvas Intensas foram a tipologia mais frequente, com 5.773 registros, superando Estiagem e Seca em apenas 103 ocorrências, indicando uma forte predominância de eventos hídricos severos.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "f92e434d9f4335229ac1874979315b44f0c94bf4f6a181a1e133846b64a83d7e",
-    "updated_at": 1780250446,
-    "version": "v4-local-causality"
+    "signature": "ac0652a925e1cbd595da36ca835bcbc2b9df448defe4b0e8976aa6a720778b32",
+    "updated_at": 1780270229,
+    "version": "v6-richer-gemini-rationale"
   },
   "UFs por danos materiais": {
     "insight": "O Rio de Janeiro lidera em danos materiais com R$ 18,19 bilhões, seguido de perto por Minas Gerais (R$ 17,98 bi) e Rio Grande do Sul (R$ 17,10 bi), sendo que o pico gaúcho em prejuízos recentes pode estar associado às enchentes de abril e maio de 2024.",
@@ -280,31 +280,31 @@
     "version": "v4-local-causality"
   },
   "UFs por óbitos": {
-    "insight": "O Rio de Janeiro lidera em óbitos (1.807) devido à tragédia da Região Serrana em 2011, que causou mais de 900 mortes.",
+    "insight": "O Rio de Janeiro lidera os óbitos com 393 registros, respondendo por 32,6% do total e superando o segundo colocado, RS, em 145 mortes, o que demanda atenção especial para as condições de vulnerabilidade e gestão de riscos no estado.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "bbc1e53f3df82d1c4179faaab7c729b4ca12d37f1976793209062afcfed1147b",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "7319ddfb50a64582532caa068922a35d3fbefd3e79dbc39abd2474c9e06e7e45",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   },
   "Óbitos por ano": {
-    "insight": "Os óbitos por ano mostram um aumento geral de 36 em 1991 para 87 em 2025, com picos notáveis em 2011 (957 óbitos).",
+    "insight": "A concentração de óbitos em 2022, com 650 registros, representa 52,6% do total, sugerindo um ano de impacto particularmente severo ou um início de período com maior letalidade.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "17e7687d56fe8df16209de6079a3a7e3e3888229ef05ebd23dc16b495ad19a12",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "d8d44030414779042c1b95cd41310c095d7dc71755eabd7c3f0291a9f51586d7",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   },
   "Óbitos por mês": {
-    "insight": "Janeiro concentra o maior número de óbitos, com 1.800 registros, indicando uma sazonalidade específica para este tipo de ocorrência.",
+    "insight": "Setembro é o mês com maior número de óbitos (292), representando 23,6% do total, e sua liderança sobre Maio (226) pode indicar uma sazonalidade ligada a eventos como tempestades extratropicais ou início da estação chuvosa em algumas regiões.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "0e050a85f4eaac7532d165ad3082af36ed720f72a1b75aa57007ea0d6f70dd8e",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "5b4b6deba2f15bea384d51a49288a5ca1176e006312f34869a690e934c2d4d7a",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   },
   "Óbitos por tipologia": {
-    "insight": "Enxurradas foram a principal causa de óbitos (1.883), seguidas por Chuvas Intensas (1.293), totalizando mais de 3.000 vidas perdidas.",
+    "insight": "As Chuvas Intensas concentram 79,4% dos óbitos, totalizando 982 mortes e superando as demais tipologias em mais de 12 vezes, o que reforça a necessidade de políticas de prevenção e adaptação focadas nesse tipo de desastre.",
     "model": "gemini-2.5-flash-lite",
-    "signature": "4ae93854187413b4ef1f49fd90d65af57c5936380d7600f12810e15af4333833",
-    "updated_at": 1780250554,
-    "version": "v4-local-causality"
+    "signature": "b4818465d3ac8db7ff1d7d8283d5c667640a652264b5de355e175d8e6024b5a2",
+    "updated_at": 1780269878,
+    "version": "v6-richer-gemini-rationale"
   }
 }

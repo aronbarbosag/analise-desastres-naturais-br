@@ -42,7 +42,7 @@ INSIGHTS_CACHE_PATH = (
 DISASTER_CONTEXTS_PATH = (
     Path(__file__).resolve().parents[2] / "data" / "reference" / "disaster_contexts.json"
 )
-INSIGHT_TEXT_VERSION = "v4-local-causality"
+INSIGHT_TEXT_VERSION = "v6-richer-gemini-rationale"
 
 
 @dataclass(frozen=True)
@@ -57,7 +57,7 @@ class PendingChartInsight:
 
 class ChartInsightItem(BaseModel):
     index: int = Field(ge=0)
-    insight: str = Field(min_length=60, max_length=300)
+    insight: str = Field(min_length=60, max_length=380)
 
 
 class ChartInsightBatch(BaseModel):
@@ -79,7 +79,7 @@ def queue_chart_insight(placeholder: Any, fig: Any, fallback: str) -> None:
     context = st.session_state.get("_chart_insight_context", "")
     title = _figure_title(fig)
     summary = _chart_summary(fig)
-    historical_context = _match_disaster_context(title, summary) or ""
+    historical_context = _match_disaster_context(title, summary, context) or ""
     pending.append(
         PendingChartInsight(
             placeholder=placeholder,
@@ -132,7 +132,7 @@ def generate_batch_chart_insights(
     for api_key in _gemini_api_keys()[:2]:
         try:
             batch = _run_gemini_batch(prompt_key, prompt, model_name, api_key)
-            results = _merge_batch_with_fallbacks(batch, cached, fallbacks)
+            results = _merge_batch_with_fallbacks(batch, charts, cached, fallbacks)
             _write_cached_insights(charts, results, fallbacks, model_name)
             return results
         except UsageLimitExceeded:
@@ -173,10 +173,13 @@ def _run_gemini_batch(
             "Você é um analista de dados escrevendo insights para um dashboard "
             "acadêmico sobre desastres naturais no Brasil. Gere insights em "
             "português do Brasil, com uma frase por gráfico, sem markdown. "
-            "Vá além de repetir o maior valor do gráfico: explique concentração, "
-            "pico, contraste ou contexto local. Use apenas os dados resumidos "
-            "fornecidos. Não afirme causalidade em cruzamentos ENSO; use leitura "
-            "exploratória ou associação temporal."
+            "Vá além de repetir o maior valor do gráfico: responda por que a "
+            "observação chama atenção usando concentração, diferença para o "
+            "segundo colocado, mudança temporal, sazonalidade ou contexto local "
+            "curado. Use apenas os dados resumidos fornecidos. Nunca cite anos, "
+            "municípios, UFs ou tragédias que não apareçam no resumo do gráfico "
+            "ou no contexto histórico específico. Não afirme causalidade em "
+            "cruzamentos ENSO; use leitura exploratória ou associação temporal."
         ),
         retries=1,
     )
@@ -185,8 +188,8 @@ def _run_gemini_batch(
         usage_limits=UsageLimits(
             request_limit=1,
             input_tokens_limit=3_800,
-            output_tokens_limit=1_100,
-            total_tokens_limit=4_900,
+            output_tokens_limit=1_400,
+            total_tokens_limit=5_200,
         ),
     )
     return result.output
@@ -215,15 +218,17 @@ def _batch_prompt(
         "Regras:\n"
         "- Retorne um objeto estruturado com a lista `insights`.\n"
         "- Cada item deve ter `index` igual ao número do gráfico e `insight`.\n"
-        "- Escreva uma frase curta; use duas apenas se o contexto histórico for necessário.\n"
-        "- Não repita apenas o dado que já está evidente no gráfico; acrescente interpretação.\n"
+        "- Escreva uma ou duas frases curtas, com densidade analítica.\n"
+        "- Não repita apenas o dado que já está evidente no gráfico; acrescente uma hipótese explicativa segura.\n"
+        "- Responda 'por que isso chama atenção?' usando apenas concentração, distância para o segundo, tendência, sazonalidade, composição territorial ou contexto histórico específico.\n"
         "- Cite no máximo um valor principal, quando ele for essencial.\n"
-        "- Use o contexto do recorte para citar período, municípios afetados e um registro/evento provável quando fizer sentido.\n"
-        "- Quando houver 'Contexto histórico específico', incorpore esse evento no insight de forma profissional.\n"
-        "- Para rankings de óbitos, prejuízo privado ou municípios/UFs em destaque, explique o que pode estar por trás do pico usando o contexto histórico específico.\n"
+        "- Baseie a frase principalmente em 'Primeiro/último', 'Top valores' e 'Leitura estatística' do próprio gráfico.\n"
+        "- O contexto do recorte serve para período e volume geral; não use o evento de referência do recorte para explicar um gráfico diferente.\n"
+        "- Só cite tragédia, desastre histórico ou evento externo quando houver 'Contexto histórico específico' para aquele gráfico.\n"
+        "- Nunca cite ano fora do período do recorte.\n"
+        "- Se o fallback local ou o contexto histórico conflitar com os Top valores, siga os Top valores.\n"
         "- Não invente fatos externos; use apenas o contexto do dataset.\n"
-        "- Prefira o contexto histórico específico ao texto genérico do fallback local.\n"
-        "- Não ultrapasse 300 caracteres por insight.\n"
+        "- Não ultrapasse 380 caracteres por insight.\n"
         "- Se um gráfico não tiver dados suficientes, use uma observação cautelosa.\n\n"
         f"Contexto do recorte:\n{context}\n\n"
         + "\n".join(blocks)
@@ -231,14 +236,21 @@ def _batch_prompt(
 
 
 def _merge_batch_with_fallbacks(
-    batch: ChartInsightBatch, cached: list[str | None], fallbacks: list[str]
+    batch: ChartInsightBatch,
+    charts: list[PendingChartInsight],
+    cached: list[str | None],
+    fallbacks: list[str],
 ) -> list[str]:
     results = [
         insight or fallback for insight, fallback in zip(cached, fallbacks, strict=False)
     ]
     for item in batch.insights:
         if 0 <= item.index < len(results):
-            results[item.index] = item.insight.strip()
+            results[item.index] = _validate_generated_insight(
+                item.insight.strip(),
+                charts[item.index],
+                fallbacks[item.index],
+            )
     return results
 
 
@@ -301,6 +313,7 @@ def _chart_summary(fig: Any) -> str:
     title = _figure_title(fig)
     points = _top_points(fig, limit=3)
     first_last = _first_last_points(fig)
+    stats = _distribution_stats(fig)
     trace_names = [
         str(name)
         for trace in getattr(fig, "data", [])
@@ -322,7 +335,37 @@ def _chart_summary(fig: Any) -> str:
             f"{label}={_format_number(value)}" for label, value in points
         )
         lines.append(f"Top valores: {formatted_points}")
+    if stats:
+        lines.append(f"Leitura estatística: {stats}")
     return "\n".join(lines)
+
+
+def _distribution_stats(fig: Any) -> str:
+    points = _top_points(fig, limit=5)
+    if not points:
+        return ""
+
+    values = _aggregated_points(fig)
+    positive_total = sum(value for value in values.values() if value > 0)
+    if positive_total <= 0:
+        return ""
+
+    leader_label, leader_value = points[0]
+    parts = [
+        f"{leader_label} representa {_format_percent(leader_value / positive_total)} do total visível"
+    ]
+    if len(points) >= 2 and points[1][1] > 0:
+        second_label, second_value = points[1]
+        ratio = leader_value / second_value
+        gap = leader_value - second_value
+        parts.append(
+            f"lidera sobre {second_label} por {_format_number(gap)} "
+            f"({_format_ratio(ratio)}x)"
+        )
+    if len(points) >= 3:
+        top_three_share = sum(value for _, value in points[:3]) / positive_total
+        parts.append(f"top 3 somam {_format_percent(top_three_share)}")
+    return "; ".join(parts)
 
 
 def _dataset_context(df: pd.DataFrame) -> str:
@@ -391,23 +434,19 @@ def _enhance_fallback(
     return _limit_sentences(f"{fallback} {joined_context}", max_chars=300)
 
 
-def _match_disaster_context(title: str, summary: str) -> str | None:
+def _match_disaster_context(title: str, summary: str, dataset_context: str) -> str | None:
     haystack = _normalize_text(f"{title} {summary}")
+    year_min, year_max = _dataset_year_range(dataset_context)
     contexts = _load_disaster_contexts()
-    is_specific_chart = any(
-        term in haystack
-        for term in [
-            "municipio",
-            "municipios",
-            "uf",
-            "ufs",
-            "obito",
-            "obitos",
-            "prejuizo privado",
-            "prejuizo publico",
-        ]
-    )
-    if not is_specific_chart:
+    chart_metric = _chart_metric(title)
+    if chart_metric not in {
+        "obitos",
+        "danos",
+        "prejuizo",
+        "desabrigados",
+        "desalojados",
+        "afetados",
+    }:
         return None
 
     matches: list[tuple[int, int, str]] = []
@@ -418,21 +457,109 @@ def _match_disaster_context(title: str, summary: str) -> str | None:
         for item in items if isinstance(items, list) else []:
             if not isinstance(item, dict):
                 continue
+            years = [int(year) for year in item.get("years", []) if str(year).isdigit()]
+            if not _years_overlap(years, year_min, year_max):
+                continue
             keywords = item.get("keywords", [])
             keyword_score = sum(
                 1 for keyword in keywords if _normalize_text(str(keyword)) in haystack
             )
-            years = item.get("years", [])
+            if not _metric_matches_keywords(chart_metric, keywords):
+                continue
             year_score = sum(1 for year in years if str(year) in haystack)
             score = location_score + keyword_score + min(year_score, 2)
             summary = item.get("summary")
-            if location_score == 0 and year_score == 0:
+            if location_score == 0:
                 continue
             if score >= 4 and isinstance(summary, str):
                 matches.append((score, -location_position, summary))
     if not matches:
         return None
     return sorted(matches, key=lambda item: (item[0], item[1]), reverse=True)[0][2]
+
+
+def _dataset_year_range(context: str) -> tuple[int | None, int | None]:
+    match = re.search(r"\b(19\d{2}|20\d{2})-(19\d{2}|20\d{2})\b", context)
+    if not match:
+        return None, None
+    year_min = int(match.group(1))
+    year_max = int(match.group(2))
+    return min(year_min, year_max), max(year_min, year_max)
+
+
+def _years_overlap(
+    years: list[int], year_min: int | None, year_max: int | None
+) -> bool:
+    if year_min is None or year_max is None or not years:
+        return True
+    return any(year_min <= year <= year_max for year in years)
+
+
+def _chart_metric(title: str) -> str:
+    normalized = _normalize_text(title)
+    if "obito" in normalized or "morte" in normalized:
+        return "obitos"
+    if "dano" in normalized:
+        return "danos"
+    if "prejuizo" in normalized:
+        return "prejuizo"
+    if "desabrig" in normalized:
+        return "desabrigados"
+    if "desaloj" in normalized:
+        return "desalojados"
+    if "afetado" in normalized or "pessoas" in normalized:
+        return "afetados"
+    if "registro" in normalized:
+        return "registros"
+    return "outros"
+
+
+def _metric_matches_keywords(chart_metric: str, keywords: list[Any]) -> bool:
+    normalized_keywords = " ".join(_normalize_text(str(keyword)) for keyword in keywords)
+    metric_terms = {
+        "obitos": ["obito", "obitos", "morte", "mortes"],
+        "danos": ["dano", "danos", "materiais"],
+        "prejuizo": ["prejuizo", "prejuizos"],
+        "desabrigados": ["desabrig"],
+        "desalojados": ["desaloj"],
+        "afetados": ["afetado", "afetados", "pessoas"],
+    }
+    return any(term in normalized_keywords for term in metric_terms.get(chart_metric, []))
+
+
+def _validate_generated_insight(
+    insight: str, chart: PendingChartInsight, fallback: str
+) -> str:
+    year_min, year_max = _dataset_year_range(
+        st.session_state.get("_chart_insight_context", "")
+    )
+    if year_min is not None and year_max is not None:
+        years = [int(year) for year in re.findall(r"\b(19\d{2}|20\d{2})\b", insight)]
+        if any(year < year_min or year > year_max for year in years):
+            return fallback
+
+    normalized_insight = _normalize_text(insight)
+    normalized_allowed = _normalize_text(
+        f"{chart.title} {chart.summary} {chart.historical_context}"
+    )
+    event_terms = [
+        "regiao serrana",
+        "morro do bumba",
+        "petropolis",
+        "nova friburgo",
+        "teresopolis",
+        "sao sebastiao",
+        "maceio",
+        "rio grande do sul",
+        "grande recife",
+    ]
+    if any(
+        term in normalized_insight and term not in normalized_allowed
+        for term in event_terms
+    ):
+        return fallback
+
+    return insight
 
 
 def _location_score(normalized_location: str, haystack: str) -> int:
@@ -498,10 +625,12 @@ def _first_last_points(fig: Any) -> tuple[str, float, str, float] | None:
     points = _aggregated_points(fig)
     if len(points) < 2:
         return None
+    if not all(label.isdigit() for label in points):
+        return None
 
     def sort_key(item: tuple[str, float]) -> tuple[int, str]:
         label = item[0]
-        return (int(label), label) if label.isdigit() else (10_000, label)
+        return (int(label), label)
 
     ordered = sorted(points.items(), key=sort_key)
     first_label, first_value = ordered[0]
@@ -542,6 +671,16 @@ def _figure_title(fig: Any) -> str:
 
 def _format_number(value: float) -> str:
     return format_int(value)
+
+
+def _format_percent(value: float) -> str:
+    return f"{value * 100:.1f}%".replace(".", ",")
+
+
+def _format_ratio(value: float) -> str:
+    if value >= 10:
+        return format_int(value)
+    return f"{value:.1f}".replace(".", ",")
 
 
 def _as_list(value: Any) -> list[Any]:

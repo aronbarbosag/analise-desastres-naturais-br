@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 from .constants import CHART_PALETTE, ENSO_COLORS
+from .formatters import format_int
 
 COLORS = {
     "registros": CHART_PALETTE[0],
@@ -86,7 +87,7 @@ def bar(
     color: str = COLORS["registros"],
     height: int = 420,
 ) -> go.Figure:
-    fig = px.bar(df, x=x, y=y, title=title, text_auto=".2s")
+    fig = px.bar(df, x=x, y=y, title=title, text=_value_labels(df, y))
     fig.update_traces(marker_color=color, textposition="outside", cliponaxis=False)
     return apply_default_layout(fig, title=title, height=height)
 
@@ -100,7 +101,14 @@ def horizontal_bar(
     height: int | None = None,
 ) -> go.Figure:
     data = df.sort_values(x, ascending=True)
-    fig = px.bar(data, x=x, y=y, orientation="h", title=title, text_auto=".2s")
+    fig = px.bar(
+        data,
+        x=x,
+        y=y,
+        orientation="h",
+        title=title,
+        text=_value_labels(data, x),
+    )
     fig.update_traces(marker_color=color, textposition="outside", cliponaxis=False)
     final_height = height or max(360, min(620, 110 + 24 * len(data)))
     return apply_default_layout(fig, title=title, height=final_height)
@@ -118,8 +126,8 @@ def line_or_bar(
             marker_size=7,
         )
     else:
-        fig = px.bar(df, x=x, y=y, title=title, text_auto=".2s")
-        fig.update_traces(marker_color=color)
+        fig = px.bar(df, x=x, y=y, title=title, text=_value_labels(df, y))
+        fig.update_traces(marker_color=color, textposition="outside", cliponaxis=False)
     return apply_default_layout(fig, title=title, height=420)
 
 
@@ -153,7 +161,7 @@ def grouped_bar(
         color=color_col,
         barmode="group",
         title=title,
-        text_auto=".2s",
+        text=_value_labels(df, y),
         color_discrete_map=ENSO_COLORS,
     )
     fig.update_traces(textposition="outside", cliponaxis=False)
@@ -169,3 +177,22 @@ def heatmap(df: pd.DataFrame, title: str) -> go.Figure:
     plot_df = df.set_index(index_col)
     fig = px.imshow(plot_df, aspect="auto", title=title, color_continuous_scale="Blues")
     return apply_default_layout(fig, title=title, height=420)
+
+
+def _value_labels(df: pd.DataFrame, value_col: str) -> pd.Series:
+    return df[value_col].map(_format_value_label)
+
+
+def _format_value_label(value: object) -> str:
+    if pd.isna(value):
+        return ""
+    number = float(value)
+    if number.is_integer():
+        return format_int(number)
+    return (
+        f"{number:,.2f}".replace(",", "X")
+        .replace(".", ",")
+        .replace("X", ".")
+        .rstrip("0")
+        .rstrip(",")
+    )
