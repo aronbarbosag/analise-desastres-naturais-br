@@ -1,24 +1,36 @@
-# Dashboard de Desastres Naturais no Brasil
+## Apresentação do projeto
 
-Dashboard interativo em Streamlit para analisar registros históricos de desastres naturais no Brasil entre 1991 e 2025. O projeto cruza dados do Atlas Digital de Desastres Naturais com uma classificação anual de El Niño/La Niña, permitindo explorar registros, impactos humanos, danos materiais, prejuízos econômicos e padrões associados ao ENSO.
+Esse é um projeto acadêmico para a disciplina Linguagens de programação do curso Sistemas de Informação no Unilasalle RJ.<br>
+Professor da disciplina: **Alexandre Louzada**<br>
+Autor do dashboard e análises: **Aron Barbosa**<br>
+Período: **2026.1**<br>
 
-## Preview
 
-> Espaço reservado para imagens da aplicação.
+## Tema
 
-| Visão geral | Filtros e KPIs |
-| --- | --- |
-| `assets/screenshots/dashboard-overview.png` | `assets/screenshots/filters-kpis.png` |
+Desastres naturais no Brasil
 
-| Gráficos e insights | Conclusões do recorte |
-| --- | --- |
-| `assets/screenshots/charts-insights.png` | `assets/screenshots/conclusions.png` |
+A fonte dos dados é real e de conhecimento nacional. Ela foi obtida pelo Atlas Digital de Desastres Naturais e pertence ao governo federal.
 
-Quando adicionar as imagens, substitua os caminhos acima por tags Markdown:
+Créditos: https://atlasdigital.mdr.gov.br/
 
-```md
-![Visão geral do dashboard](assets/screenshots/dashboard-overview.png)
-```
+
+## Sobre a análise
+
+Foi feito um dashboard interativo utilizando a biblioteca do Python Streamlit como interface de interação.
+
+A análise conta com registros históricos de desastres naturais no Brasil entre 1991 e 2025. O projeto cruza dados do Atlas Digital de Desastres Naturais com uma classificação anual de El Niño/La Niña, permitindo explorar registros, impactos humanos, danos materiais, prejuízos econômicos e padrões associados ao ENSO.
+
+
+
+## Preview do dashboard
+
+
+
+![Visão geral do dashboard](./assets/screenshots/screenshot_1.jpg)
+![Visão geral do dashboard](./assets/screenshots/screenshot_2.jpg)
+![Visão geral do dashboard](./assets/screenshots/screenshot_3.jpg)
+
 
 ## Principais Recursos
 
@@ -72,43 +84,22 @@ assets/
   screenshots/               # Imagens do README
 ```
 
-## Dados
+## Datasets tratados e otimizados via parquet
 
-Coloque os arquivos abaixo em `data/raw/`:
-
-```text
-data/raw/desastres-naturais-atlas-digital.xlsx
-data/raw/el_nino_la_nina_eventos_1990_2025.csv
-```
-
-O app gera automaticamente:
-
-```text
-data/processed/desastres_atlas_corrigidos_enso.parquet
-data/processed/chart_insights.json
-```
 
 O Parquet acelera a abertura do dashboard e é recriado quando os arquivos raw são atualizados. O JSON guarda insights gerados para reaproveitamento quando o recorte e os dados do gráfico continuam compatíveis.
 
-## Rodando Localmente
+## Apresentação do projeto 🎬
 
-Instale as dependências:
+<a href="https://aronbarbosag.github.io/analise-desastres-naturais-br/">Apresentação </a>
 
-```bash
-uv sync
+## Acesse o dashboard no endereço abaixo 📊
+
+<a href="https://dashboard-desastres-naturais-br.streamlit.app/">Dashboard </a>
+
+
 ```
 
-Inicie o dashboard com a task:
-
-```bash
-task start
-```
-
-Acesse:
-
-```text
-http://localhost:8503
-```
 
 ## Tasks
 
@@ -129,21 +120,6 @@ task --list
 
 ## Gemini E Insights
 
-A IA é opcional. Sem chaves configuradas, o dashboard usa insights locais de fallback.
-
-Para ativar o Gemini, crie `.streamlit/secrets.toml`:
-
-```toml
-GEMINI_API_KEY = "sua-chave-principal"
-GEMINI_API_KEY_2 = "sua-chave-reserva"
-GEMINI_MODEL = "gemini-2.5-flash-lite"
-```
-
-Existe um exemplo em:
-
-```text
-.streamlit/secrets.toml.example
-```
 
 A geração segue esta ordem:
 
@@ -155,27 +131,11 @@ Os insights usam `data/reference/disaster_contexts.json` como curadoria auxiliar
 
 Essas notas devem ser lidas como contexto histórico provável, não como prova causal automática. Em cruzamentos ENSO, a leitura é exploratória e indica associação temporal, não causalidade.
 
-## Docker
-
-Build e execução:
-
-```bash
-docker compose up --build
-```
-
-Acesse:
-
-```text
-http://localhost:8503
-```
-
-O `docker-compose.yml` monta o projeto em `/app`, então alterações locais no código são refletidas no container durante o desenvolvimento.
 
 ## Landing Page
 
 O arquivo `index.html` contém uma landing page estática para apresentação do projeto e link para o dashboard publicado.
 
-Para visualizar localmente, abra o arquivo no navegador ou sirva a pasta com um servidor estático de sua preferência.
 
 ## Metodologia E Limitações
 
